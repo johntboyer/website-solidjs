@@ -2,7 +2,7 @@ import { ComponentProps, ParentProps } from "solid-js";
 import { Dynamic } from "solid-js/web";
 import { A } from "solid-start";
 
-type ElementType = typeof A | "button";
+type ElementType = typeof A | "button" | "a";
 
 type Props<T extends ElementType> = {
 	as?: T;

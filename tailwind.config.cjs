@@ -3,7 +3,7 @@ module.exports = {
 	content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
 	theme: {
 		fontFamily: {
-			sans: ["Frank Ruhl Libre", "sans-serif"],
+			sans: ["Atkinson Hyperlegible", "sans-serif"],
 		},
 		extend: {
 			typography: (theme) => ({

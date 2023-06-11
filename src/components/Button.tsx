@@ -20,7 +20,7 @@ export default function Button<T extends ElementType = typeof defaultType>({
 		<Dynamic
 			component={as || defaultType}
 			{...(props as ParentProps<ComponentProps<T>>)}
-			class={`border border-black rounded hover:bg-black/20 px-2 ${classProp}`}
+			class={`border border-black hover:bg-black/20 px-2 shadow-[1px_1px_0px_0px_#000] ${classProp}`}
 		/>
 	);
 }

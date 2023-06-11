@@ -18,9 +18,9 @@ export default function Navbar() {
 					Code
 				</Button>
 				{/* Todo environment var from build */}
-				<p class="ml-auto border border-black px-2 rounded bg-orange-400">
+				<span class="ml-auto border border-black px-2 shadow-[1px_1px_0px_0px_#000] bg-orange-400">
 					Version: 0.0.0.1
-				</p>
+				</span>
 			</nav>
 		</header>
 	);

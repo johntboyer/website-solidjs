@@ -1,0 +1,17 @@
+{
+	"eslint.validate": [
+		"mdx"
+	],
+	"editor.quickSuggestions": {
+		"comments": "on",
+		"strings": "on"
+	},
+	"css.lint.unknownAtRules": "ignore",
+	"[mdx]": {
+		"editor.wordWrap": "wordWrapColumn"
+	},
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true
+	}
+}

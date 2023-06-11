@@ -3,11 +3,11 @@ import Button from "./Button";
 
 export default function Navbar() {
 	return (
-		<header class="w-full flex flex-col items-stretch max-w-2xl mx-auto py-2 border-black border-b">
+		<header class="w-full px-1 md:px-0 flex flex-col items-stretch max-w-2xl mx-auto py-2 border-black border-b">
 			<div class="flex justify-between">
 				<span class="text-lg underline font-serif">johntboyer</span>
 			</div>
-			<nav class="flex gap-2 items-end">
+			<nav class="flex gap-2 items-end flex-wrap">
 				<Button as={A} href="/">
 					Home
 				</Button>

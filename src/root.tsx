@@ -30,7 +30,7 @@ export default function Root() {
 				<Suspense>
 					<ErrorBoundary>
 						<Navbar />
-						<main class="max-w-2xl mx-auto w-full py-8">
+						<main class="max-w-2xl px-1 md:px-0 mx-auto w-full py-8">
 							<article class="prose">
 								<Routes>
 									<FileRoutes />

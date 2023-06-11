@@ -1,8 +1,6 @@
 // @refresh reload
 import { Suspense } from "solid-js";
 import {
-	useLocation,
-	A,
 	Body,
 	ErrorBoundary,
 	FileRoutes,
@@ -14,13 +12,10 @@ import {
 	Title,
 } from "solid-start";
 import "./root.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function Root() {
-	const location = useLocation();
-	const active = (path: string) =>
-		path == location.pathname
-			? "border-sky-600"
-			: "border-transparent hover:border-sky-600";
 	return (
 		<Html lang="en">
 			<Head>
@@ -28,22 +23,21 @@ export default function Root() {
 				<Meta charset="utf-8" />
 				<Meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
-			<Body>
+			<Body
+				class="font-sans subpixel-antialiased"
+				style={{ "text-rendering": "optimizeLegibility" }}
+			>
 				<Suspense>
 					<ErrorBoundary>
-						<nav class="bg-sky-800">
-							<ul class="container flex items-center p-3 text-gray-200">
-								<li class={`border-b-2 ${active("/")} mx-1.5 sm:mx-6`}>
-									<A href="/">Home</A>
-								</li>
-								<li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-6`}>
-									<A href="/about">About</A>
-								</li>
-							</ul>
-						</nav>
-						<Routes>
-							<FileRoutes />
-						</Routes>
+						<Navbar />
+						<main class="max-w-2xl mx-auto w-full py-8">
+							<article class="prose">
+								<Routes>
+									<FileRoutes />
+								</Routes>
+							</article>
+						</main>
+						<Footer />
 					</ErrorBoundary>
 				</Suspense>
 				<Scripts />

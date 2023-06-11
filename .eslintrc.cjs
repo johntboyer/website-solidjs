@@ -1,7 +1,9 @@
-// eslint-disable-next-line no-undef
 module.exports = {
 	root: true,
-	extends: ["eslint:recommended", "plugin:prettier/recommended"],
+	env: {
+		node: true,
+		es6: true,
+	},
 	overrides: [
 		{
 			files: ["*.mdx"],
@@ -13,7 +15,11 @@ module.exports = {
 		},
 		{
 			files: ["*.ts", "*.tsx"],
-			extends: ["plugin:@typescript-eslint/recommended"],
+			extends: [
+				"eslint:recommended",
+				"plugin:prettier/recommended",
+				"plugin:@typescript-eslint/recommended",
+			],
 			parser: "@typescript-eslint/parser",
 			plugins: ["@typescript-eslint"],
 		},

@@ -18,9 +18,6 @@ module.exports = {
 								color: theme("colors.blue.800"),
 							},
 						},
-						h2: {
-							marginTop: '1em'
-						},
 						ul: {
 							listStyleType: 'square',
 						},
